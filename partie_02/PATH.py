@@ -25,6 +25,8 @@ path2 = path2 / "1" / "2" / "3"
 
 path2 = path2 / "readme.txt" #create readme.txt path
 #path2.touch() #creat file readme.txt
+#path2.write_text("hello")
+#text = path2.read_text()
 #path2.unlink() #delete the readme.txt  
                 
 print(path2)
