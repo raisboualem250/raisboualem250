@@ -1,4 +1,5 @@
 from pathlib import Path
+import shutil
 path = Path.home() #to get the user folder
 print(path)
 path1 = Path.cwd() #ti get curent  worked directory
@@ -23,5 +24,16 @@ path2 = path2 / "1" / "2" / "3"
 #path2.mkdir(parents = True) # creat the folder and the uri 
 
 path2 = path2 / "readme.txt" #create readme.txt path
-path2.touch() #creat file readme.txt
-path2.unlink() #delete the readme.txt
+#path2.touch() #creat file readme.txt
+#path2.unlink() #delete the readme.txt  
+                
+print(path2)
+path2 = path2.parent    # return to the parent folder so we are
+print(path2)            # C:\Users\kenzi\Documents\FORMATION_PYTHON\raisboualem250\partie_02\f0\test folder\1\2\3
+#path2.rmdir()           # delete the folder 3
+path2 = path2.parent.parent.parent
+
+print(path2)
+
+shutil.rmtree(path2) # delete folders 1 and 2
+
